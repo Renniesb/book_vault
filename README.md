@@ -1,0 +1,2 @@
+-add typescript
+-test cross-browser vendor prefixes
