@@ -10,7 +10,10 @@
 
 # next.js
 /.next/
+/.next/*
 /out/
+*.pack.gz
+*.pack.gz*
 
 # production
 /build
