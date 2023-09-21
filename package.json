@@ -5,10 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "NODE_ENV=production concurrently \"npm run server\" \"npm run client\"",
+    "start:dev": "NODE_ENV=development concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:prod": "node server/src/app.js",
+    "server:dev": "nodemon --exec ts-node server/src/app.ts",
+    "client:prod": "cd client && npm run build && npm start",
+    "client:dev": "cd client && npm run dev",
+    "test": "NODE_ENV=test concurrently \"npm run test:frontend\" \"npm run test:backend\"",
+    "test:frontend": "cd client && npm test",
+    "test:backend": "cd backend && npm test",
     "server": "nodemon --exec ts-node server/src/app.ts",
-    "client": "cd client && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm run dev"
   },
   "keywords": [],
   "author": "",
