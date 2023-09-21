@@ -1,0 +1,26 @@
+.app {
+	display: flex;
+	justify-content: center;
+}
+
+.option-selector {
+    margin-top: 10px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+@media (max-width: 440px) {
+
+	.option-selector {
+		margin-top: 10px;
+	}
+
+}
+@media (min-width: 441px) and (max-width: 767px) {
+	
+    .option-selector {
+		margin-top: 10px;
+	}
+	
+}
+
