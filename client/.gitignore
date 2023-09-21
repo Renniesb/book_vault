@@ -12,8 +12,7 @@
 /.next/
 /.next/*
 /out/
-*.pack.gz
-*.pack.gz*
+.client/.next/cache/
 
 # production
 /build
@@ -36,3 +35,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
