@@ -1,0 +1,30 @@
+.searchbar {
+	padding: 10px;
+	width: 200px;
+	border: .2px solid rgb(155, 155, 155);
+	border-radius: 3px;
+}
+
+.searchbar-list {
+	li {
+		list-style: none;
+	}
+	position: absolute;
+	background-color: #ffffffbe;
+	z-index: 1;
+	overflow-y: scroll;
+	height: fit-content;
+	max-height: 100px;
+	min-height: 0px;
+	width: 180px;
+  }
+.search-input-container {
+	position: relative;
+}
+.search-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 85%;
+	color: gray;
+}
