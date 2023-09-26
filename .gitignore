@@ -3,3 +3,16 @@ node_modules
 package-lock.json
 **/.DS_Store
 copilot_snippets.json
+client/.next/trace
+client/.next/build-manifest.json
+client/.storybook/main.ts
+client/.next/server/next-font-manifest.js
+client/.next/server/next-font-manifest.json
+client/.next/server/webpack-runtime.js
+client/.next/static/chunks/webpack.js
+client/.next/static/development/_buildManifest.js
+server/package-lock.json
+client/package-lock.json
+client/.next/server/middleware-build-manifest.js
+client/.next/server/pages-manifest.json
+client/.storybook/preview.ts
