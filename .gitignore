@@ -1,10 +1,4 @@
 node_modules
 node_modules
 package-lock.json
-*hot-update.json
-/storybook/
-/storybook-static/
-/stories/
-/stories/*
-/snapshots/
 **/.DS_Store

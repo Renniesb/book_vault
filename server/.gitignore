@@ -1,0 +1,52 @@
+# Node.js & npm
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Express generated files
+dist/
+build/
+*.log
+
+# Editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.test
+.env.prod
+
+# Coverage reports (if you generate them)
+coverage/
+
+# Dependency directories
+/jspm_packages/
+/pack/
+/lib/vendor/
+/bower_components/
+
+# Logs
+logs/
+*.log
+
+# Mocha test reports (if you generate them)
+test-results/
+
+# Optional: Uncomment these lines if you use TypeScript
+# node_modules/
+# dist/
+# tsconfig.json
+
+# Optional: Uncomment these lines if you use ESLint
+# node_modules/
+# .eslintcache/
+# .eslintrc.js
