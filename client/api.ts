@@ -11,4 +11,21 @@ async function fetchData() {
   }
 }
 
-export { fetchData };
+
+async function postNewBook(API_ENDPOINT: string, bookTitle: string, genres: string, photoLink: string, description: string) {
+  try {
+    const response = await axios.post(API_ENDPOINT, {
+      bookTitle,
+      genres,
+      photoLink,
+      description,
+    });
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+
+export { fetchData, postNewBook };
