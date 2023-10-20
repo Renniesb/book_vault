@@ -7,7 +7,7 @@ const AddBook = () => {
     const [bookImageLink, setBookImageLink] = useState('');
     const [bookDescription, setBookDescription] = useState('');
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event:any) => {
         event.preventDefault();
         // handle form submission logic here
     };
