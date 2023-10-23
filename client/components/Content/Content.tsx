@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Item } from "../../types/api/books";
 import { ContentProps } from "../../types/componentProps";
 import styles from '../Content/Content.module.scss';
+import { useState } from "react";
+import Modal from '../Model/Model';
 
 const Content = ({
   allContent,
@@ -18,7 +20,14 @@ const Content = ({
     contentTypeSelected,
     searchTerm
   );
+  const [selectedBook, setSelectedBook] = useState<Item | null>(null);
+  const handleBookClick = (book: Item) => {
+    setSelectedBook(book);
+  };
 
+  const handleModalClose = () => {
+    setSelectedBook(null);
+  };
   return (
     <div className={styles["grid-container"]}>
       {filteredContent.length > 0 && (
@@ -47,10 +56,18 @@ const Content = ({
               {item.volumeInfo.publishedDate.toString().substring(0, 4)})
             </p>
             <p className={styles.genres}>Genres: {item.volumeInfo.categories}</p>
-            <p>{item?.searchInfo?.textSnippet}</p>
+            <button className={styles["more-info"]} onClick={() => handleBookClick(item)}>
+              More Info
+            </button>
           </div>
         );
       })}
+      {selectedBook && (
+        <Modal onClose={handleModalClose}>
+          <h2>{selectedBook.volumeInfo.title}</h2>
+          <p>{selectedBook.volumeInfo?.description || selectedBook.searchInfo?.textSnippet || "No Description"}</p>
+        </Modal>
+      )}
     </div>
   );
 };
