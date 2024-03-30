@@ -1,10 +1,10 @@
 "use client"
 import { useEffect, useState } from 'react';
-import { fetchData } from "../api";
-import {filterAndSortGenres, filterAndSortYears} from '../helpers'
+import { fetchData } from "../../api";
+import {filterAndSortGenres, filterAndSortYears} from '../../helpers'
 import { Item } from '@/types/api/books';
 import ContentControls from '@/components/ContentControls/ContentControls';
-import Content from '@/app/collections/page';
+import Content from '@/components/Content/Content';
 import styles from '@/app/page.module.scss';
 import { Login } from '@/components/Login/Login';
 import HeaderBar  from '@/components/HeaderBar/HeaderBar';
@@ -56,16 +56,17 @@ export default function Home() {
   };
 
   return (
-    <>
-     <HeaderBar isLoggedIn={false}></HeaderBar>
-        {/* <ContentControls
+    <div className={styles.app}>
+      <div>
+        <HeaderBar isLoggedIn={false}></HeaderBar>
+        <ContentControls
           allContent={data}
           {...filters}
           {...selections}
           {...selectionMethods}
         />
-        <Content allContent={data} {...selections} /> */}
-        <Login />
-    </>
+        <Content allContent={data} {...selections} />
+      </div>
+    </div>
   );
 }

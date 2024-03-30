@@ -1,8 +1,9 @@
+'use client';
 import { filterContent } from "../../helpers";
 import Image from "next/image";
 import { Item } from "../../types/api/books";
 import { ContentProps } from "../../types/componentProps";
-import styles from '../Content/Content.module.scss';
+import styles from './Content.module.scss';
 import { useState } from "react";
 import Modal from '../Model/Model';
 

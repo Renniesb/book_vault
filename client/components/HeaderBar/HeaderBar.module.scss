@@ -1,0 +1,33 @@
+.header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed; // Fixed position to keep the header at the top
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex; // Display header content as flex items
+    justify-content: space-between; // Align items to the start and end of the header
+    align-items: center; // Center items vertically
+
+    ul {
+        list-style: none; // Remove default list styling
+        margin: 0;
+        padding: 0;
+        display: flex; // Display list items as flex items
+    }
+
+    li {
+        margin-right: 20px; // Spacing between navigation links
+    }
+
+    a {
+        color: #fff; // Link text color
+        text-decoration: none; // Remove default underline
+        transition: color 0.3s ease; // Smooth transition for link color change
+
+        &:hover {
+            color: #ffcc00; // Change link color on hover
+        }
+    }
+}

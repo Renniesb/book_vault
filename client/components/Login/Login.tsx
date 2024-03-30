@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styles from './Login.module.css'
+import React from 'react';
+import styles from './Login.module.scss'
 export const Login = () => {
     return (
         <div className={styles.login}>
@@ -10,6 +10,7 @@ export const Login = () => {
                     <input type="password" placeholder="Password" className={styles.login_container_form_input} />
                     <button className={styles.login_container_form_button}>Login</button>
                 </form>
+                <p>Login or create an account to make your own book collections or visit the <u>Book Collections</u> link to check out ours.</p>
             </div>
         </div>
     )
